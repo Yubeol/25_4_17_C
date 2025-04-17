@@ -28,6 +28,6 @@ int main(void) {
 	else {
 		printf("%s 불합격. (평균: %.2f)", name, average);
 	}
-
+	printf("%s님은 %d입니다.", name , grade);
 	return 0;
 }
