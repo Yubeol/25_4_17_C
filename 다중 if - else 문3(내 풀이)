@@ -1,0 +1,33 @@
+/*문제: 이름과 3개의 정수로된 점수 입력 받아서 각 점수가 40점이상이고
+*		평균이 60점 이상이면 합격 평균 60이상이고 각 점수중 하나라도 40미만이면 과락 그외는
+*		불합격을 출력하시오.
+*		입력형식: 홍길동 100 61 39
+*		출력형식: 홍길동 100 61 39 xx.xx 과락
+*/
+#include <stdio.h>
+
+int main(void) {
+
+	char name;
+	int score1, score2, score3;
+	float average;
+
+	printf("이름과 점수 3개를 입력: ");
+	scanf_s("%s,%d,%d,%d", name, &score1, &score2, &score3);
+
+	average = (score1 + score2 + score3) / 3;
+
+	if (average >= 60) {
+		if (score1 >= 40 && score2 >= 40 && score3 >= 40) {
+			printf("%s 합격. (평균: %.2f)", name, average);
+		}
+		else {
+			printf("%s 과롹.(평균: %.2f)", name, average);
+		}
+	}
+	else {
+		printf("%s 불합격. (평균: %.2f)", name, average);
+	}
+
+	return 0;
+}
