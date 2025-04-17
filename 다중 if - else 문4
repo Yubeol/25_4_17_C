@@ -10,7 +10,7 @@
 
 int main(void) {
 
-	char name[11], grade[7];
+	char name[11], grade[10];
 	int score1, score2, score3;
 	double average;
 	
@@ -31,7 +31,7 @@ int main(void) {
 	else {
 		strcpy_s(grade, sizeof(grade), "불합격");
 	}
-	printf("%s님은 %c입니다.", name, grade);
+	printf("%s %d %d %d %.2f %s ", name, score1, score2, score3, average, grade);
 
 
 	return 0;
